@@ -33,9 +33,7 @@ namespace ShieldsNAxes
 
         internal enum Players { axesPlayer, shieldsPlayer }
         internal Players player { get; set; }
-
-        SplashScreen splash;
-
+        
         //private Player player;
 
         private List<Button> gameButtons;
@@ -54,9 +52,7 @@ namespace ShieldsNAxes
 
         public MainWindow()
         {
-            splash = new SplashScreen("pack://application:,,,/Resources/Splash.png");
-            splash.Show(false);
-            splash.Close(new TimeSpan(5000));
+            Thread.Sleep(5000);
             InitializeComponent();
         }
 
