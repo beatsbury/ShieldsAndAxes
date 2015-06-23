@@ -48,8 +48,8 @@ namespace ShieldsNAxes
         public MainWindow()
         {
             Thread.Sleep(3000);
-
             InitializeComponent();
+            BtnStart.Visibility = System.Windows.Visibility.Hidden;
         }
 
         protected virtual void OnPlayerChanged()
@@ -97,10 +97,10 @@ namespace ShieldsNAxes
         {
             if (player == Players.shieldsPlayer)
             {
-                //if (playerChoice == PlayerChoice.singlePlayer)
-                //{
-                ComputerMove();
-                //}
+                if (playerChoice == PlayerChoice.singlePlayer)
+                {
+                    ComputerMove();
+                }
             };
         }
 
@@ -399,6 +399,9 @@ namespace ShieldsNAxes
             {
                 button.IsEnabled = false;
             }
+            BtnStart.Visibility = System.Windows.Visibility.Hidden;
+            btnMultiPlayer.Visibility = System.Windows.Visibility.Visible;
+            btnSinglePlayer.Visibility = System.Windows.Visibility.Visible;
         }
 
         //  behold the game winning logic
