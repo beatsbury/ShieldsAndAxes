@@ -212,7 +212,7 @@
     <SplashScreen Include="Splash.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\multiPlayer.png" />
+    <None Include="Resources\multiPlayer.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\singlePlayer.png" />
