@@ -16,7 +16,7 @@ namespace ShieldsNAxes
     public partial class MainWindow : Window
     {
         public event EventHandler PlayerChanged;
-                
+
         //public RoutedEventArgs e { get; set; }
 
         public int moves { get; set; }
@@ -64,28 +64,39 @@ namespace ShieldsNAxes
         private void btnSinglePlayer_Click(object sender, RoutedEventArgs e)
         {
             playerChoice = PlayerChoice.singlePlayer;
-            playerMadeAChoice();
+            PlayerMadeAChoice();
         }
 
 
         private void btnMultiPlayer_Click(object sender, RoutedEventArgs e)
         {
             playerChoice = PlayerChoice.multiPlayer;
-            playerMadeAChoice();
+            PlayerMadeAChoice();
         }
 
-        private void playerMadeAChoice()
+        private void PlayerMadeAChoice()
         {
-            InitializeButtons();
+            FlushButtons();
             BtnStart.Visibility = System.Windows.Visibility.Visible;
             btnMultiPlayer.Visibility = System.Windows.Visibility.Hidden;
             btnSinglePlayer.Visibility = System.Windows.Visibility.Hidden;
         }
 
+        private void FlushButtons()
+        {
+            if (gameButtons != null)
+            {
+                foreach (var gb in gameButtons)
+                {
+                    gb.Content = "";
+                } 
+            }
+        }
+
         //  dealing with starter button click
         private void StartClick(object sender, EventArgs e)
         {
-            //InitializeButtons();
+            InitializeButtons();
             axes = new List<Button>();
             shields = new List<Button>();
             player = Players.axesPlayer;
@@ -480,7 +491,7 @@ namespace ShieldsNAxes
             this.Close();
         }
 
-        
+
 
         //  handling borderless window dragging, just in case...
         //private void mainWindow_mouseDown(object sender, MouseButtonEventArgs e)
