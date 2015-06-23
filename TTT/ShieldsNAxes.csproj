@@ -212,10 +212,10 @@
     <SplashScreen Include="Splash.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\multiPlayer.png" />
+    <Resource Include="Resources\multiPlayer.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\singlePlayer.png" />
+    <Resource Include="Resources\singlePlayer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

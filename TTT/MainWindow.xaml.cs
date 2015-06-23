@@ -16,15 +16,7 @@ namespace ShieldsNAxes
     public partial class MainWindow : Window
     {
         public event EventHandler PlayerChanged;
-
-        protected virtual void OnPlayerChanged()
-        {
-            if (PlayerChanged != null)
-            {
-                PlayerChanged(this, EventArgs.Empty);
-            }
-        }
-
+                
         //public RoutedEventArgs e { get; set; }
 
         public int moves { get; set; }
@@ -58,6 +50,14 @@ namespace ShieldsNAxes
             Thread.Sleep(3000);
 
             InitializeComponent();
+        }
+
+        protected virtual void OnPlayerChanged()
+        {
+            if (PlayerChanged != null)
+            {
+                PlayerChanged(this, EventArgs.Empty);
+            }
         }
 
         // players choice

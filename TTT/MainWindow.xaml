@@ -67,7 +67,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Background>
-                <ImageBrush ImageSource="pack://Application:,,,/Resources/singlePlayer.png"/>
+                <ImageBrush ImageSource="pack://Application:,,,/Resources/singlePlayer.png" Stretch="None"/>
             </Button.Background>
         </Button>
         <Button Grid.Row="3" Grid.Column="0" 
@@ -78,7 +78,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Background>
-                <ImageBrush ImageSource="pack://Application:,,,/Resources/multiPlayer.png"/>
+                <ImageBrush ImageSource="pack://Application:,,,/Resources/multiPlayer.png" Stretch="None"/>
             </Button.Background>
         </Button>
         <Button Grid.Row="3"                Grid.Column="1" 
