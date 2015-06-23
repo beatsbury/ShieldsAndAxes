@@ -76,6 +76,7 @@ namespace ShieldsNAxes
 
         private void playerMadeAChoice()
         {
+            InitializeButtons();
             BtnStart.Visibility = System.Windows.Visibility.Visible;
             btnMultiPlayer.Visibility = System.Windows.Visibility.Hidden;
             btnSinglePlayer.Visibility = System.Windows.Visibility.Hidden;
@@ -84,7 +85,7 @@ namespace ShieldsNAxes
         //  dealing with starter button click
         private void StartClick(object sender, EventArgs e)
         {
-            InitializeButtons();
+            //InitializeButtons();
             axes = new List<Button>();
             shields = new List<Button>();
             player = Players.axesPlayer;
