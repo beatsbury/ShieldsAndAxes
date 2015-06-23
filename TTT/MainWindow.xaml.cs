@@ -33,7 +33,10 @@ namespace ShieldsNAxes
 
         internal enum Players { axesPlayer, shieldsPlayer }
         internal Players player { get; set; }
-        
+
+        internal enum PlayerChoice { singlePlayer, multiPlayer }
+        internal PlayerChoice playerChoice;
+
         //private Player player;
 
         private List<Button> gameButtons;
@@ -52,8 +55,30 @@ namespace ShieldsNAxes
 
         public MainWindow()
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
+
             InitializeComponent();
+        }
+
+        // players choice
+        private void btnSinglePlayer_Click(object sender, RoutedEventArgs e)
+        {
+            playerChoice = PlayerChoice.singlePlayer;
+            playerMadeAChoice();
+        }
+
+
+        private void btnMultiPlayer_Click(object sender, RoutedEventArgs e)
+        {
+            playerChoice = PlayerChoice.multiPlayer;
+            playerMadeAChoice();
+        }
+
+        private void playerMadeAChoice()
+        {
+            BtnStart.Visibility = System.Windows.Visibility.Visible;
+            btnMultiPlayer.Visibility = System.Windows.Visibility.Hidden;
+            btnSinglePlayer.Visibility = System.Windows.Visibility.Hidden;
         }
 
         //  dealing with starter button click
@@ -72,7 +97,10 @@ namespace ShieldsNAxes
         {
             if (player == Players.shieldsPlayer)
             {
+                //if (playerChoice == PlayerChoice.singlePlayer)
+                //{
                 ComputerMove();
+                //}
             };
         }
 
@@ -311,7 +339,7 @@ namespace ShieldsNAxes
                 return buttonRange[3];
             }
         }
-                
+
         private Button ButtonChance()
         {
             var possibleButtons = (from button in gameButtons
@@ -447,6 +475,8 @@ namespace ShieldsNAxes
         {
             this.Close();
         }
+
+        
 
         //  handling borderless window dragging, just in case...
         //private void mainWindow_mouseDown(object sender, MouseButtonEventArgs e)

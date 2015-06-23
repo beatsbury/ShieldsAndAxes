@@ -18,3 +18,4 @@ C:\Users\fushigi\Documents\Visual Studio 2013\Projects\TTT\TTT\obj\Debug\Shields
 C:\Users\fushigi\Documents\Visual Studio 2013\Projects\TTT\TTT\obj\Debug\ShieldsNAxes.application
 C:\Users\fushigi\Documents\Visual Studio 2013\Projects\TTT\TTT\obj\Debug\ShieldsNAxes.exe
 C:\Users\fushigi\Documents\Visual Studio 2013\Projects\TTT\TTT\obj\Debug\ShieldsNAxes.pdb
+C:\Users\fushigi\Documents\Visual Studio 2013\Projects\TTT\TTT\obj\Debug\ShieldsNAxes.csprojResolveAssemblyReference.cache
