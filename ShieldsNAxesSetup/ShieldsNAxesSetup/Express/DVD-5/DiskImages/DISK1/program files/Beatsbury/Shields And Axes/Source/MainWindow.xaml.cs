@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -16,14 +17,6 @@ namespace ShieldsNAxes
     {
         public event EventHandler PlayerChanged;
 
-        protected virtual void OnPlayerChanged()
-        {
-            if (PlayerChanged != null)
-            {
-                PlayerChanged(this, EventArgs.Empty);
-            }
-        }
-
         //public RoutedEventArgs e { get; set; }
 
         public int moves { get; set; }
@@ -32,6 +25,9 @@ namespace ShieldsNAxes
 
         internal enum Players { axesPlayer, shieldsPlayer }
         internal Players player { get; set; }
+
+        internal enum PlayerChoice { singlePlayer, multiPlayer }
+        internal PlayerChoice playerChoice;
 
         //private Player player;
 
@@ -51,7 +47,50 @@ namespace ShieldsNAxes
 
         public MainWindow()
         {
+            Thread.Sleep(3000);
             InitializeComponent();
+            BtnStart.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+        protected virtual void OnPlayerChanged()
+        {
+            if (PlayerChanged != null)
+            {
+                PlayerChanged(this, EventArgs.Empty);
+            }
+        }
+
+        // players choice
+        private void btnSinglePlayer_Click(object sender, RoutedEventArgs e)
+        {
+            playerChoice = PlayerChoice.singlePlayer;
+            PlayerMadeAChoice();
+        }
+
+
+        private void btnMultiPlayer_Click(object sender, RoutedEventArgs e)
+        {
+            playerChoice = PlayerChoice.multiPlayer;
+            PlayerMadeAChoice();
+        }
+
+        private void PlayerMadeAChoice()
+        {
+            FlushButtons();
+            BtnStart.Visibility = System.Windows.Visibility.Visible;
+            btnMultiPlayer.Visibility = System.Windows.Visibility.Hidden;
+            btnSinglePlayer.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+        private void FlushButtons()
+        {
+            if (gameButtons != null)
+            {
+                foreach (var gb in gameButtons)
+                {
+                    gb.Content = "";
+                } 
+            }
         }
 
         //  dealing with starter button click
@@ -70,7 +109,10 @@ namespace ShieldsNAxes
         {
             if (player == Players.shieldsPlayer)
             {
-                ComputerMove();
+                if (playerChoice == PlayerChoice.singlePlayer)
+                {
+                    ComputerMove();
+                }
             };
         }
 
@@ -309,7 +351,7 @@ namespace ShieldsNAxes
                 return buttonRange[3];
             }
         }
-                
+
         private Button ButtonChance()
         {
             var possibleButtons = (from button in gameButtons
@@ -369,6 +411,9 @@ namespace ShieldsNAxes
             {
                 button.IsEnabled = false;
             }
+            BtnStart.Visibility = System.Windows.Visibility.Hidden;
+            btnMultiPlayer.Visibility = System.Windows.Visibility.Visible;
+            btnSinglePlayer.Visibility = System.Windows.Visibility.Visible;
         }
 
         //  behold the game winning logic
@@ -445,6 +490,8 @@ namespace ShieldsNAxes
         {
             this.Close();
         }
+
+
 
         //  handling borderless window dragging, just in case...
         //private void mainWindow_mouseDown(object sender, MouseButtonEventArgs e)

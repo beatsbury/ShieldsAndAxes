@@ -121,6 +121,16 @@ namespace ShieldsNAxes.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap multiPlayer {
+            get {
+                object obj = ResourceManager.GetObject("multiPlayer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\uc0\stshfdbch0\stshfloch0\stshfhich0\stshfbi0\deff0\adeff0{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f2\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}{\f3\fnil\fcharset0 Trebuchet MS;}}{
         ///\colortbl;\red0\green0\blue0;\red30\green30\blue30;\red102\green102\blue102;}{\stylesheet{\s0\snext0\sqformat\spriority0\fi0\sb0\sa0\aspalpha\aspnum\adjustright\widctlpar\ltr [rest of string was truncated]&quot;;.
         /// </summary>
@@ -154,6 +164,16 @@ namespace ShieldsNAxes.Properties {
         internal static System.Drawing.Bitmap Shield {
             get {
                 object obj = ResourceManager.GetObject("Shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap singlePlayer {
+            get {
+                object obj = ResourceManager.GetObject("singlePlayer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

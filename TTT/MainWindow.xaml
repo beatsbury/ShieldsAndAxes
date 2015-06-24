@@ -59,7 +59,29 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button Grid.Row="3"                Grid.ColumnSpan="3" 
+        <Button Grid.Row="3" Grid.Column="0" 
+                Margin="10, 10, 20, 10" x:Name="btnSinglePlayer" 
+                Content="" HorizontalAlignment="Left" 
+                Width="50" Click="btnSinglePlayer_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <ImageBrush ImageSource="pack://Application:,,,/Resources/singlePlayer.png" Stretch="None"/>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="3" Grid.Column="0" 
+                Margin="20, 10, 10, 10" x:Name="btnMultiPlayer" 
+                Content="" HorizontalAlignment="Right" 
+                Width="50" Click="btnMultiPlayer_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <ImageBrush ImageSource="pack://Application:,,,/Resources/multiPlayer.png" Stretch="None"/>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="3"                Grid.Column="1" 
                 x:Name="BtnStart"           Content="BATTLE" 
                 Margin="10"                 HorizontalAlignment="Center"  
                 VerticalAlignment="Bottom"  Width="75"

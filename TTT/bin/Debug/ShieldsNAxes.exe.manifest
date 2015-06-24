@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ShieldsNAxes.exe" size="550912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ShieldsNAxes.exe" size="641536">
       <assemblyIdentity name="ShieldsNAxes" version="0.6.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nn78/V7dIfx6AU3/lEgnJy40TGeMXIW0X62ZP9Y6vr8=</dsig:DigestValue>
+        <dsig:DigestValue>6ETWrvurqHKApXZDJHKBH4xH9XyHMDbjPUzvfMAV+rI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
