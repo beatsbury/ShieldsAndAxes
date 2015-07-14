@@ -1,7 +1,7 @@
 ﻿<Window x:Class="ShieldsNAxes.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Shields &amp; Axes" UseLayoutRounding="True" WindowStartupLocation="CenterScreen" Height="490" Width="410" WindowStyle="ToolWindow"  ResizeMode="CanMinimize" FontFamily="Runic" FontWeight="Bold">
+        Title="Shields &amp; Axes" UseLayoutRounding="True" WindowStartupLocation="CenterScreen" Height="490" Width="410" WindowStyle="ToolWindow"  ResizeMode="CanMinimize" FontFamily="pack://application:,,,/Resources/#Runic Alt" FontWeight="Bold">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>

@@ -171,6 +171,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\README.rtf" />
+    <Resource Include="Resources\ComicRunes.otf" />
+    <Resource Include="Resources\runic_alt.ttf" />
     <None Include="Resources\sna_icon.ico" />
   </ItemGroup>
   <ItemGroup>
